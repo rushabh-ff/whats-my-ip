@@ -1,4 +1,4 @@
-<h1 style="text-align: center; color: rosybrown">Your IP Address: <%= @response['query'] %></h1>
+<h1 style="text-align: center; color: rosybrown">Your IP Address: <%= request.remote_ip %></h1>
 
 <h2>City: <%= @response['city'] %></h2>
 <h2>Country: <%= @response['country'] %></h2>
