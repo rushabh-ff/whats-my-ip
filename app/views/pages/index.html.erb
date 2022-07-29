@@ -1,12 +1,65 @@
-<h1 style="text-align: center; color: rosybrown">Your IP Address: <%= request.remote_ip %></h1>
+<h1 style="text-align: center;">Your IP Address: <%= request.remote_ip %></h1>
 
-<h2>City: <%= @response['city'] %></h2>
-<h2>Country: <%= @response['country'] %></h2>
-<h2>Country Code: <%= @response['countryCode'] %></h2>
-<h2>Region: <%= @response['region'] %></h2>
-<h2>Region Name: <%= @response['regionName'] %></h2>
-<h2>Zip: <%= @response['zip'] %></h2>
-<h2>Lat: <%= @response['lat'] %></h2>
-<h2>Lat: <%= @response['lat'] %></h2>
-<h2>Timezone: <%= @response['timezone'] %></h2>
-<h2>ISP: <%= @response['isp'] %></h2>
+<div class="overflow-x-auto relative mt-5">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="py-3 px-6">
+                    City
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Country
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Country Code
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Region
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Region Name
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Zip
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Lat
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Timezone
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    ISP
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <strong><%= @response["city"]%></strong>
+                </th>
+                <td class="py-4 px-6">
+                    <strong><%= @response["country"]%></strong>
+                </td>
+                <td class="py-4 px-6">
+                    <strong><%= @response["countryCode"]%></strong>
+                </td>
+                <td class="py-4 px-6">
+                    <strong><%= @response["region"]%></strong>
+                </td>
+                <td class="py-4 px-6">
+                    <strong><%= @response["zip"]%></strong>
+                </td>
+                <td class="py-4 px-6">
+                    <strong><%= @response["lat"]%></strong>
+                </td>
+                <td class="py-4 px-6">
+                    <strong><%= @response["timezone"]%></strong>
+                </td>
+                <td class="py-4 px-6">
+                    <strong><%= @response["isp"]%></strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
